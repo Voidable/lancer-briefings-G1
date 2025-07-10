@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vueDevTools from 'vite-plugin-vue-devtools'
+import vueDevTools from "vite-plugin-vue-devtools";
 import viteCompression from "vite-plugin-compression";
 import path from "path";
 
@@ -20,12 +20,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: [
-      "lancer-data",
-      "lancer-ktb-data",
-      "lancer-nrfaw-data",
-      "lancer-longrim-data"
-    ],
+    include: ["lancer-data", "lancer-ktb-data", "lancer-nrfaw-data", "lancer-longrim-data"],
   },
   build: {
     sourcemap: true,

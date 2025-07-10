@@ -2,7 +2,7 @@
   <div class="mech-modal">
     <div class="mech-header-container">
       <div class="section-header clipped-medium-backward-bio">
-        <img src="/icons/npc.svg">
+        <img src="/icons/npc.svg" />
         <h1>{{ mech.name }} [{{ mech.frame_name }}]</h1>
       </div>
       <div class="rhombus-back"></div>
@@ -16,7 +16,10 @@
               <h2>{{ mainMount.flavorName }}</h2>
             </div>
           </div>
-          <div v-if="flexMounts.length > 0 && flexMounts.some(element => element.id !== null)" class="gear-row mech-mount">
+          <div
+            v-if="flexMounts.length > 0 && flexMounts.some(element => element.id !== null)"
+            class="gear-row mech-mount"
+          >
             <div v-for="flexMount in flexMounts" class="flex-mount">
               <h1>Flex Mount</h1>
               <h2>{{ flexMount.flavorName }}</h2>
@@ -43,33 +46,32 @@
         </div>
       </div>
       <div class="mech-notes markdown">
-        <div v-html="getFrameDescription()"/>
+        <div v-html="getFrameDescription()" />
       </div>
     </div>
   </div>
   <div class="mech-modal portrait">
     <div class="mech-header-container">
       <div class="section-header clipped-medium-backward-mech">
-        <img src="/icons/mech.svg">
+        <img src="/icons/mech.svg" />
         <h1>Mech Artwork</h1>
       </div>
-      <div class="rhombus-back">
-        &nbsp;
-      </div>
+      <div class="rhombus-back">&nbsp;</div>
     </div>
     <div class="mech">
-      <img :src="mechPortrait" class="portrait">
+      <img :src="mechPortrait" class="portrait" />
     </div>
   </div>
 </template>
 
 <script>
-import { VueMarkdownIt } from '@f3ve/vue-markdown-it';
+import { VueMarkdownIt } from "@f3ve/vue-markdown-it";
 
 export default {
   components: {
     VueMarkdownIt,
-  }, inheritAttrs: false,
+  },
+  inheritAttrs: false,
   props: {
     animate: {
       type: Boolean,
@@ -90,7 +92,7 @@ export default {
     pilot: {
       type: Object,
       required: true,
-    }
+    },
   },
   data() {
     return {
@@ -100,52 +102,53 @@ export default {
       flexMounts: [],
       heavyMounts: [],
       mechSystems: [],
-    }
+    };
   },
-  beforeUpdate() {
-  },
+  beforeUpdate() {},
   mounted() {
     if (this.mech) {
       this.getActiveLoadout();
     }
-    if (this.weaponsData && typeof this.weaponsData !== 'undefined') {
+    if (this.weaponsData && typeof this.weaponsData !== "undefined") {
       this.getMechMounts();
     }
-    if (this.systemsData)
-      this.getMechSystems();
+    if (this.systemsData) this.getMechSystems();
   },
   computed: {
     pilotPortrait() {
-      return `/pilots/${this.pilot.callsign.toUpperCase()}.webp`
+      return `/pilots/${this.pilot.callsign.toUpperCase()}.webp`;
     },
     mechPortrait() {
-      return `/mechs/${this.pilot.callsign.toUpperCase()}.webp`
+      return `/mechs/${this.pilot.callsign.toUpperCase()}.webp`;
     },
   },
   methods: {
     getActiveLoadout() {
-      const activeLoadoutIdx = this.mech.active_loadout_index
-      this.activeLoadout = this.mech.loadouts[activeLoadoutIdx]
+      const activeLoadoutIdx = this.mech.active_loadout_index;
+      this.activeLoadout = this.mech.loadouts[activeLoadoutIdx];
     },
     getMechMounts() {
       let resolveMountSlots = (type, item, idx, arr) => {
-        item = item || {id: "", flavorName: ""}
-        const mountObj = this.weaponsData.find((obj) => { return item.id === obj.id }) || null
+        item = item || { id: "", flavorName: "" };
+        const mountObj =
+          this.weaponsData.find(obj => {
+            return item.id === obj.id;
+          }) || null;
         item.flavorName = mountObj?.name || "";
 
         switch (type) {
-          case 'Main':
+          case "Main":
             if (item.id == "") break;
             this.mainMounts = [...this.mainMounts, item];
             break;
-          case 'Flex':
+          case "Flex":
             if (item.id == "") break;
             this.flexMounts = [...this.flexMounts, item];
             break;
           // case "Auxiliary":
           //   this.mainMounts = [...this.mainMounts, item];
           //   break;
-          case 'Heavy':
+          case "Heavy":
             if (item.id == "") break;
             this.heavyMounts = [...this.heavyMounts, item];
             break;
@@ -154,34 +157,41 @@ export default {
             this.mainMounts = [...this.mainMounts, item];
             break;
         }
-      }
-      this.activeLoadout.mounts.forEach((mount) => {
-        const mountSlots = mount.slots
-        const mountSlotsIsArray = Array.isArray(mountSlots) && mountSlots.length > 0
+      };
+      this.activeLoadout.mounts.forEach(mount => {
+        const mountSlots = mount.slots;
+        const mountSlotsIsArray = Array.isArray(mountSlots) && mountSlots.length > 0;
         if (mountSlotsIsArray) {
-          mountSlots.forEach((slot, index, array) => resolveMountSlots(mount.mount_type, slot.weapon, index, array));
+          mountSlots.forEach((slot, index, array) =>
+            resolveMountSlots(mount.mount_type, slot.weapon, index, array)
+          );
         }
 
-        const mountExtras = mount.extra
-        const mountExtrasIsArray = Array.isArray(mountExtras) && mountExtras.length > 0
+        const mountExtras = mount.extra;
+        const mountExtrasIsArray = Array.isArray(mountExtras) && mountExtras.length > 0;
         if (mountExtrasIsArray) {
-          mountExtras.forEach((extra, index, array) => resolveMountSlots(mount.mount_type, extra.weapon, index, array));
+          mountExtras.forEach((extra, index, array) =>
+            resolveMountSlots(mount.mount_type, extra.weapon, index, array)
+          );
         }
-      })
+      });
     },
     getMechSystems() {
       let resolveMechSystems = (item, idx, arr) => {
-        item = item || {id: "", flavorName: ""}
-        const mountObj = this.systemsData.find((obj) => { return item.id === obj.id }) || null
+        item = item || { id: "", flavorName: "" };
+        const mountObj =
+          this.systemsData.find(obj => {
+            return item.id === obj.id;
+          }) || null;
         item.flavorName = mountObj?.name || "ERR: DATA NOT FOUND";
 
-        this.mechSystems = [...this.mechSystems, item]
-      }
+        this.mechSystems = [...this.mechSystems, item];
+      };
       this.activeLoadout.systems.forEach(resolveMechSystems);
     },
-    getFrameDescription(){
-      return `<p> ${this.mech.frame_description} </p>`
-    }
+    getFrameDescription() {
+      return `<p> ${this.mech.frame_description} </p>`;
+    },
   },
-}
+};
 </script>
