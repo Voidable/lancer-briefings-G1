@@ -9,7 +9,8 @@
     </div>
     <div class="body">
       <div class="add-padding">
-        Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record {{ pilot.id }}
+        Union Administrative RM-4 Pilot Identification Protocol (IDENT) Record
+        {{ pilot.id }}
       </div>
       <div class="flex-container-rows">
         <div class="row add-padding">
@@ -20,11 +21,14 @@
             <div class="row flex-container-cols">
               <div class="col col-primary">
                 <span class="flavor-text">
-                  Callsign: <b class="accent--text">{{ capitalize(pilot.callsign) }}</b
+                  Callsign:
+                  <b class="accent--text">{{ pilot.callsign }}</b
                   ><br />
-                  Name (or legal alias): <b class="accent--text">{{ pilot.name }}</b
+                  Name (or legal alias):
+                  <b class="accent--text">{{ pilot.name }}</b
                   ><br />
-                  Background: <b class="accent--text"> {{ pilot.background }} </b></span
+                  Background:
+                  <b class="accent--text"> {{ pilot.background }} </b></span
                 >
               </div>
               <div class="col">

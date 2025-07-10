@@ -11,23 +11,19 @@
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script type="module" src="/src/assets/scripts/vanta.globe.min.js"></script>
-    <script type="module">
-      VANTA.GLOBE({
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
         el: "body",
         mouseControls: false,
         touchControls: false,
         gyroControls: false,
-        minHeight: 200.0,
+        minHeight: 1000.0,
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0x694f5d,
-        color2: 0x68a691,
-        backgroundColor: 0x0c090d,
-        size: 2.0,
-        sphereRotation: -0.002,
-        meshRotation: 0.004,
+        color: 0x991e2a,
+        backgroundColor: 0x262626,
       });
     </script>
   </body>
