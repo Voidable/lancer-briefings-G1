@@ -181,11 +181,11 @@
 <script>
 import "external-svg-loader";
 import lancerData from "@massif/lancer-data";
-import ktbData from "lancer-ktb-data";
-import nrfawData from "lancer-nrfaw-data";
-import longrimData from "lancer-longrim-data";
+import ktbData from "@massif/ktb-data";
+import wallflowerData from "@massif/wallflower-data";
+import longrimData from "@massif/long-rim-data";
+import osrData from "@massif/osr-data";
 
-import wallflowerData from "@/assets/LCPs/wallflower-data-2.0.5";
 /*Append the datasets within computed if your LCP has new items.
 EX:
 pilotGear() {
@@ -237,24 +237,27 @@ export default {
       return [
         ...lancerData.weapons,
         ...ktbData.weapons,
-        ...nrfawData.weapons,
+        ...wallflowerData.weapons,
         ...longrimData.weapons,
+        ...osrData.weapons,
       ];
     },
     mechSystems() {
       return [
         ...lancerData.systems,
         ...ktbData.systems,
-        ...nrfawData.systems,
+        ...wallflowerData.systems,
         ...longrimData.systems,
+        ...osrData.systems,
       ];
     },
     talents() {
       return [
         ...lancerData.talents,
         ...ktbData.talents,
-        ...nrfawData.talents,
+        ...wallflowerData.talents,
         ...longrimData.talents,
+        ...osrData.talents,
       ];
     },
     skills() {
@@ -264,7 +267,13 @@ export default {
       return [...ktbData.bonds];
     },
     frames() {
-      return [...lancerData.frames, ...ktbData.frames, ...nrfawData.frames, ...longrimData.frames];
+      return [
+        ...lancerData.frames,
+        ...ktbData.frames,
+        ...wallflowerData.frames,
+        ...longrimData.frames,
+        ...osrData.frames,
+      ];
     },
     mechManufacturerIcon() {
       if (this.activeMech.manufacturer)
