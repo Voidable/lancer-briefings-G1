@@ -1,30 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
-	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
-	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
-	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
-	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
-	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
-	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
-	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
-]>
-<svg version="1.1" id="Content" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1080 1080"
-	 style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
-<switch>
-	<foreignObject requiredExtensions="&ns_ai;" x="0" y="0" width="1" height="1">
-		<i:pgfRef  xlink:href="#adobe_illustrator_pgf">
-		</i:pgfRef>
+
+<svg
+   version="1.1"
+   id="Content"
+   x="0px"
+   y="0px"
+   viewBox="0 0 1080 1080"
+   style="enable-background:new 0 0 1080 1080;"
+   xml:space="preserve"
+   sodipodi:docname="gms.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:i="&amp;ns_ai;"><defs
+   id="defs225" /><sodipodi:namedview
+   id="namedview223"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   showgrid="false"
+   inkscape:zoom="0.76574074"
+   inkscape:cx="539.34704"
+   inkscape:cy="541.30593"
+   inkscape:window-width="2560"
+   inkscape:window-height="1008"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Content" />
+<switch
+   id="switch220"
+   style="fill:#ffffff">
+	<foreignObject
+   requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"
+   x="0"
+   y="0"
+   width="1"
+   height="1">
+		
 	</foreignObject>
-	<g i:extraneous="self">
-		<g>
-			<path d="M911.43,538.1L732.16,218.95c-1.67-2.97-4.81-4.81-8.22-4.81H348.03c-7.22,0-11.75,7.78-8.2,14.06l173.85,307.5
-				c1.65,2.92,1.62,6.5-0.07,9.4L334.06,851.67c-3.68,6.28,0.85,14.18,8.13,14.18h376.09c3.34,0,6.42-1.76,8.12-4.64L911.33,547.5
-				C913.04,544.61,913.07,541.03,911.43,538.1z"/>
-			<path d="M298.99,305.86L168.58,536.53c-1.65,2.92-1.62,6.5,0.07,9.4l130.41,222.68c4.86,8.29,17.55,4.85,17.55-4.76V310.5
-				C316.62,300.81,303.76,297.43,298.99,305.86z"/>
+	<g
+   i:extraneous="self"
+   id="g218"
+   style="fill:#ffffff">
+		<g
+   id="g216"
+   style="fill:#ffffff">
+			<path
+   d="M911.43,538.1L732.16,218.95c-1.67-2.97-4.81-4.81-8.22-4.81H348.03c-7.22,0-11.75,7.78-8.2,14.06l173.85,307.5     c1.65,2.92,1.62,6.5-0.07,9.4L334.06,851.67c-3.68,6.28,0.85,14.18,8.13,14.18h376.09c3.34,0,6.42-1.76,8.12-4.64L911.33,547.5     C913.04,544.61,913.07,541.03,911.43,538.1z"
+   id="path212"
+   style="fill:#ffffff" />
+			<path
+   d="M298.99,305.86L168.58,536.53c-1.65,2.92-1.62,6.5,0.07,9.4l130.41,222.68c4.86,8.29,17.55,4.85,17.55-4.76V310.5     C316.62,300.81,303.76,297.43,298.99,305.86z"
+   id="path214"
+   style="fill:#ffffff" />
 		</g>
 	</g>
 </switch>
