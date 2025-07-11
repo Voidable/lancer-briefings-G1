@@ -1,7 +1,7 @@
 {
   "id": "bc162896-2197-48fd-b3c2-a7e65c12dd48",
   "level": 0,
-  "callsign": "Cantankerous ",
+  "callsign": "Cantankerous",
   "name": "Cam Calhoun",
   "player_name": "",
   "status": "Active",
@@ -219,7 +219,7 @@
       "notes": "",
       "gm_note": "",
       "frame": "mf_chomolungma",
-      "active": false,
+      "active": true,
       "current_structure": 4,
       "current_move": 4,
       "boost": 0,
@@ -433,7 +433,7 @@
     "core_uses": 0
   },
   "state": {
-    "active_mech_id": "d9cc326d-ca54-4bcc-b4be-68a9732ca64f",
+    "active_mech_id": "6bf2562e-36ed-413e-857d-3c218bd8c737",
     "remote_mech_id": "",
     "stage": "Narrative",
     "turn": 1,

@@ -5,7 +5,7 @@
         <div class="heading h1">{{ pilot.callsign }}</div>
         <div class="heading h2">({{ pilot.name }})</div>
       </div>
-      <div class="col"><img src="/faction-logos/msmc.svg" /></div>
+      <div class="col"><img src="/faction-logos/union.svg" /></div>
     </div>
     <div class="body">
       <div class="add-padding">
@@ -22,7 +22,7 @@
               <div class="col col-primary">
                 <span class="flavor-text">
                   Callsign:
-                  <b class="accent--text">{{ pilot.callsign }}</b
+                  <b class="accent--text">{{ capitalize(pilot.callsign) }}</b
                   ><br />
                   Name (or legal alias):
                   <b class="accent--text">{{ pilot.name }}</b
