@@ -1,8 +1,8 @@
 {
-  "initialSlug": "002",
+  "initialSlug": "004",
   "planetPath": "/planet.webm",
   "animate": true,
-  "defaultTitle": "UNS-CV RIO GRANDE |",
+  "defaultTitle": "TASK FORCE INDIGO |",
   "icon": "/faction-logos/union.svg",
   "header": {
     "planet": "Cressidium",
@@ -12,7 +12,7 @@
     "ring": "Cascade",
     "headerTitle": "Union",
     "headerSubtitle": "Naval Department",
-    "subheaderTitle": "UNS-CV Rio Grande",
+    "subheaderTitle": "TASK FORCE INDIGO",
     "subheaderSubtitle": "Arrow Squadron"
   },
   "pilotSpecialInfo": {}
